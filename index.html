@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surya Kanta Roul - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Calibri', 'Arial', sans-serif;
+        }
+        
+        body {
+            background: #f5f5f5;
+            padding: 10px;
+            color: #333;
+        }
+        
+        .resume-container {
+            width: 210mm;
+            height: 297mm;
+            margin: 0 auto;
+            background: white;
+            padding: 10mm 15mm 6mm 15mm;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 14px;
+        }
+        
+        .name {
+            font-size: 26px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+        
+        .title {
+            font-size: 15px;
+            color: #34495e;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 11px;
+        }
+        
+        .section {
+            margin-bottom: 15px;
+        }
+        
+        .section-title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 4px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px 10px;
+            font-size: 11px;
+        }
+        
+        .skill-category {
+            margin-bottom: 6px;
+        }
+        
+        .skill-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 11px;
+        }
+        
+        .skill-items {
+            color: #444;
+            font-size: 10.5px;
+            line-height: 1.4;
+        }
+        
+        .experience-item {
+            margin-bottom: 13px;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 13px;
+        }
+        
+        .company {
+            font-weight: 600;
+            color: #34495e;
+            font-size: 12px;
+        }
+        
+        .date-location {
+            text-align: right;
+            font-size: 11px;
+        }
+        
+        .date {
+            color: #555;
+            font-weight: 500;
+        }
+        
+        .location {
+            color: #666;
+        }
+        
+        .project {
+            margin: 6px 0 8px 10px;
+            padding-left: 8px;
+            border-left: 2px solid #3498db;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            color: #34495e;
+            margin-bottom: 4px;
+            font-size: 12px;
+        }
+        
+        .bullet-points {
+            margin-left: 14px;
+            font-size: 11px;
+        }
+        
+        .bullet-points li {
+            margin-bottom: 4px;
+            line-height: 1.4;
+            color: #333;
+        }
+        
+        .technologies {
+            font-style: italic;
+            color: #555;
+            margin-top: 4px;
+            font-size: 10.5px;
+            font-weight: 500;
+        }
+        
+        .summary-text {
+            font-size: 11px;
+            line-height: 1.5;
+            text-align: justify;
+            color: #333;
+        }
+        
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+        }
+        
+        .education-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .education-school {
+            font-weight: 600;
+            color: #34495e;
+            font-size: 11px;
+        }
+
+        /* Force true A4 print layout */
+        @page {
+            size: A4;
+            margin: 0; /* change to 10mm if printer adds margin */
+        }
+
+        * {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        @media print {
+            html, body {
+                width: 210mm;
+                height: 297mm;
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+
+            .resume-container {
+                width: 210mm;
+                min-height: 297mm;
+                height: 297mm;
+                margin: 0;
+                padding: 10mm 15mm 6mm;
+                box-shadow: none;
+                border: none;
+            }
+
+            .header,
+            .section,
+            .experience-item,
+            .skills-container,
+            .education-header {
+                page-break-inside: avoid;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <div class="name">SURYA KANTA ROUL</div>
+            <div class="title">React Developer | Frontend Engineer | Full-Stack Java Developer</div>
+            <div class="contact-info">
+                <div>Bangalore, Karnataka</div>
+                <div>+91-9556225240</div>
+                <div>suryakantaroul29@gmail.com</div>
+                <div>linkedin.com/in/suryaroul</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <p class="summary-text">Results-driven React Developer with 3+ years building scalable SPAs and responsive web interfaces. Expert in React.js, JavaScript (ES6+), Redux, TypeScript, and REST API integration. Proven success optimizing frontend performance, implementing component-based architecture, and leading Agile teams. Strong focus on web accessibility (WCAG), cross-browser compatibility, and maintainable code.</p>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <div class="skill-title">Languages</div>
+                    <div class="skill-items">JavaScript (ES6+), TypeScript, Java, Python, HTML5, CSS3</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Frontend</div>
+                    <div class="skill-items">React.js, Redux, Context API, React Hooks, Single Page Applications</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">UI Libraries</div>
+                    <div class="skill-items">Material UI, Bootstrap, Ant Design, Responsive Design</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Backend & APIs</div>
+                    <div class="skill-items">REST API, Spring Boot, Node.js, Express.js, API Integration</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Testing</div>
+                    <div class="skill-items">Jest, Enzyme, React Testing Library, Unit Testing</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Tools & Build</div>
+                    <div class="skill-items">Webpack, Babel, NPM, Yarn, Git, CI/CD, Jenkins</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Cloud</div>
+                    <div class="skill-items">AWS (S3, EC2), Azure DevOps, DigitalOcean</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Databases</div>
+                    <div class="skill-items">MySQL, PostgreSQL, MongoDB</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Mobile</div>
+                    <div class="skill-items">React Native, Expo, Cross-Platform Development</div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-title">Methodologies</div>
+                    <div class="skill-items">Agile/Scrum, Web Performance Optimization, WCAG Accessibility</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">React Developer</div>
+                        <div class="company">Zerom Tech</div>
+                    </div>
+                    <div class="date-location">
+                        <div class="date">May 2025 – Present</div>
+                        <div class="location">Bangalore, India</div>
+                    </div>
+                </div>
+                
+                <ul class="bullet-points">
+                    <li>Developed interactive financial dashboards using React.js, Material UI, and Chart.js with real-time data visualization, reducing stakeholder decision-making time by 25%.</li>
+                    <li>Integrated REST APIs with .NET backend and implemented Azure CI/CD pipelines, reducing deployment time by 40% and achieving 85% test coverage with Jest.</li>
+                </ul>
+                <div class="technologies">Technologies: React.js, TypeScript, Material UI, Redux Toolkit, .NET Core, PostgreSQL, Azure DevOps</div>
+                
+                <div class="project">
+                    <div class="project-title">Eatify - Restaurant Management System</div>
+                    <ul class="bullet-points">
+                        <li>Led end-to-end frontend development with 30+ modular React components, ensuring cross-browser compatibility and WCAG accessibility compliance.</li>
+                        <li>Deployed optimized production builds with performance optimization techniques including code minification, lazy loading, and responsive design using CSS Grid/Flexbox.</li>
+                    </ul>
+                    <div class="technologies">Technologies: React.js, Redux, Java Spring Boot, MongoDB, REST API, Bootstrap, Git</div>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Associate Software Engineer</div>
+                        <div class="company">WovvTech</div>
+                    </div>
+                    <div class="date-location">
+                        <div class="date">December 2024 – May 2025</div>
+                        <div class="location">Vadodara, India</div>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-title">Fashion Aggregator E-commerce Platform (Client: Builder.ai)</div>
+                    <ul class="bullet-points">
+                        <li>Developed 25+ responsive React.js UI components from Figma designs, implementing mobile-first responsive design and improving page load efficiency by 15% through code splitting and lazy loading.</li>
+                        <li>Led frontend development in Agile sprints, conducted code reviews, and integrated REST APIs with backend teams using Redux for state management.</li>
+                    </ul>
+                    <div class="technologies">Technologies: React.js, Redux, JavaScript (ES6+), REST API, Java, PostgreSQL, AWS, Webpack</div>
+                </div>
+            </div>
+            
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Associate Software Engineer</div>
+                        <div class="company">Info Era Software Services</div>
+                    </div>
+                    <div class="date-location">
+                        <div class="date">December 2022 – November 2024</div>
+                        <div class="location">Bengaluru, India</div>
+                    </div>
+                </div>
+                
+                <div class="project">
+                    <div class="project-title">Lovepet Care Platform</div>
+                    <ul class="bullet-points">
+                        <li>Implemented internationalization (i18n) with react-i18next for 5+ languages, expanding user base by 30%, and built reusable component library reducing development time by 20%.</li>
+                    </ul>
+                    <div class="technologies">Technologies: React.js, Context API, Node.js, MongoDB, AWS, Material UI</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">Education</div>
+            <div class="education-header">
+                <div>
+                    <div class="education-title">Bachelor of Technology (B.Tech) in Mechanical Engineering</div>
+                    <div class="education-school">Centurion University of Technology and Management, Bhubaneswar, India</div>
+                </div>
+                <div class="date-location">
+                    <div class="date">2016 – 2019</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
